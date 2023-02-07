@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Render } from '@nestjs/common';
+import { Body, Controller, Get, Post, Redirect, Render } from '@nestjs/common';
 import { AppService } from './app.service';
 import { chatApi } from './libs/openapi';
 
@@ -7,6 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) { }
 
   @Get()
+  @Redirect('chat-ai')
   getHello(): string {
     return this.appService.getHello();
   }
