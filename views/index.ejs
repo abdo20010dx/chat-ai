@@ -272,7 +272,7 @@
 
         appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
         msgerInput.value = "";
-        let response = await fetch('https://abdo-chat-ai.herokuapp.com/chat-ai',
+        let response = await fetch('http://localhost:3000/chat-ai',
             {
                 method: 'POST',
                 headers: {
